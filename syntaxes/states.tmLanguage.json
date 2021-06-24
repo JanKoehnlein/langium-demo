@@ -1,0 +1,48 @@
+{
+  "name": "states",
+  "scopeName": "source.states",
+  "fileTypes": [
+    ".states"
+  ],
+  "patterns": [
+    {
+      "name": "keyword.control.states",
+      "match": "\\b(event|state|statemachine)\\b"
+    },
+    {
+      "name": "keyword.symbol.states",
+      "match": "(\\=>)"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.states",
+          "begin": "/\\*",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.states"
+            }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.states"
+            }
+          }
+        },
+        {
+          "begin": "(^\\s+)?(?=//)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.cs"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.states"
+        }
+      ]
+    }
+  }
+}

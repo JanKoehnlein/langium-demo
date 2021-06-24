@@ -1,0 +1,6 @@
+tasks:
+  - init: |
+      npm install \
+      && npm run langium:generate \
+      && npm run build \
+      && echo "Hit F5 to try the language in a new Gitpod tab"
